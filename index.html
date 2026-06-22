@@ -22,6 +22,22 @@
             box-sizing: border-box;
             color: #000;
         }
+        .watermark { 
+            position: absolute; 
+            top: 50%; 
+            left: 50%; 
+            transform: translate(-50%, -50%) rotate(-45deg); 
+            font-size: 70px; 
+            font-weight: bold;
+            color: rgba(0,0,0,0.03); 
+            white-space: nowrap; 
+            pointer-events: none; 
+            z-index: 1;
+        }
+        .content {
+            position: relative;
+            z-index: 2;
+        }
         .header-container {
             display: flex;
             justify-content: space-between;
@@ -32,10 +48,9 @@
         }
         .header-text { text-align: center; width: 60%; }
         .header-text h1 { margin: 0; font-size: 20px; font-weight: bold; }
-        .header-text h2 { margin: 5px 0; font-size: 18px; }
+        .header-text h2 { margin: 5px 0; font-size: 18px; color: #b71c1c; } /* Slight dark red for official look */
         .header-text p { margin: 0; font-size: 14px; font-weight: bold; }
         
-        /* Logos Placeholder styling */
         .logo { width: 80px; height: 80px; object-fit: contain; }
 
         .candidate-section {
@@ -47,7 +62,6 @@
         .info-table td { padding: 8px; font-size: 14px; }
         .info-table td:nth-child(odd) { font-weight: bold; width: 35%; }
 
-        /* Photo and Sign styling */
         .photo-sign-container {
             width: 20%;
             display: flex;
@@ -64,7 +78,7 @@
         .candidate-sign {
             width: 100px;
             height: 35px;
-            border: 1px solid #000;
+            border: 1px solid #ccc;
             object-fit: contain;
         }
 
@@ -75,85 +89,88 @@
         .data-table td:first-child { font-weight: bold; padding-left: 15px; width: 60%; }
         .data-table td:last-child { text-align: center; font-weight: bold; }
         
-        .footer { margin-top: 40px; font-size: 12px; text-align: center; border-top: 1px dashed #000; padding-top: 10px; }
+        .footer { margin-top: 40px; font-size: 12px; text-align: center; border-top: 1px dashed #000; padding-top: 10px; color: #555; }
     </style>
 </head>
 <body>
     <div class="card">
-        <!-- HEADER WITH LOGOS -->
-        <div class="header-container">
-            <img src="ap_logo.png" alt="AP Logo" class="logo">
-            <div class="header-text">
-                <h1>GOVERNMENT OF ANDHRA PRADESH</h1>
-                <h2>AP EAPCET - 2026 RANK CARD</h2>
-                <p>(Agriculture & Pharmacy Stream)</p>
+        <div class="watermark">APSCHE AP EAPCET 2026</div>
+        
+        <div class="content">
+            <!-- HEADER WITH DIRECT ONLINE LOGOS -->
+            <div class="header-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Emblem_of_Andhra_Pradesh.svg/200px-Emblem_of_Andhra_Pradesh.svg.png" alt="AP Logo" class="logo">
+                <div class="header-text">
+                    <h1>GOVERNMENT OF ANDHRA PRADESH</h1>
+                    <h2>AP EAPCET - 2026 RANK CARD</h2>
+                    <p>(Agriculture & Pharmacy Stream)</p>
+                </div>
+                <img src="https://cets.apsche.ap.gov.in/APSCHEHome/Images/logo.png" alt="APSCHE Logo" class="logo">
             </div>
-            <img src="apsche_logo.png" alt="APSCHE Logo" class="logo">
-        </div>
 
-        <!-- CANDIDATE INFO, PHOTO & SIGN -->
-        <div class="candidate-section">
-            <table class="info-table">
-                <tr>
-                    <td>Hall Ticket No.</td>
-                    <td>: 561171010199</td>
-                </tr>
-                <tr>
-                    <td>Candidate's Name</td>
-                    <td>: KATTA KEERTANA</td>
-                </tr>
-                <!-- Father's Name intentionally omitted -->
-                <tr>
-                    <td>Gender</td>
-                    <td>: FEMALE</td>
-                </tr>
-                <tr>
-                    <td>Category</td>
-                    <td>: ST</td>
-                </tr>
-                <tr>
-                    <td>Local Area</td>
-                    <td>: AU</td>
+            <!-- CANDIDATE INFO, PHOTO & SIGN -->
+            <div class="candidate-section">
+                <table class="info-table">
+                    <tr>
+                        <td>Hall Ticket No.</td>
+                        <td>: 561171010199</td>
+                    </tr>
+                    <tr>
+                        <td>Candidate's Name</td>
+                        <td>: KATTA KEERTANA</td>
+                    </tr>
+                    <tr>
+                        <td>Gender</td>
+                        <td>: FEMALE</td>
+                    </tr>
+                    <tr>
+                        <td>Category</td>
+                        <td>: ST</td>
+                    </tr>
+                    <tr>
+                        <td>Local Area</td>
+                        <td>: AU</td>
+                    </tr>
+                </table>
+                
+                <!-- Photo (to be uploaded by you) and Cursive Signature (Online Placeholder) -->
+                <div class="photo-sign-container">
+                    <img src="photo.jpg" alt="Candidate Photo" class="candidate-photo">
+                    <img src="https://fakeimg.pl/100x35/ffffff/000000/?text=K.Keertana&font=lobster" alt="Candidate Signature" class="candidate-sign">
+                </div>
+            </div>
+
+            <!-- MARKS DETAILS -->
+            <table class="data-table">
+                <tr><th colspan="2">MARKS DETAILS</th></tr>
+                <tr><td>Botany</td><td>09</td></tr>
+                <tr><td>Zoology</td><td>08</td></tr>
+                <tr><td>Physics</td><td>05</td></tr>
+                <tr><td>Chemistry</td><td>05</td></tr>
+                <tr style="background-color: #eaeaea;">
+                    <td style="text-align: right; padding-right: 20px;">Total Marks</td>
+                    <td>27</td>
                 </tr>
             </table>
-            
-            <!-- Exact Photo and Sign section -->
-            <div class="photo-sign-container">
-                <img src="photo.jpg" alt="Candidate Photo" class="candidate-photo">
-                <img src="sign.jpg" alt="Candidate Signature" class="candidate-sign">
+
+            <!-- RANK DETAILS -->
+            <table class="data-table">
+                <tr><th colspan="2">RANK DETAILS</th></tr>
+                <tr>
+                    <td>State General Rank</td>
+                    <td style="font-size: 16px;">92456</td>
+                </tr>
+                <tr>
+                    <td>Category Rank (ST)</td>
+                    <td style="font-size: 16px;">4124</td>
+                </tr>
+            </table>
+
+            <!-- FOOTER -->
+            <div class="footer">
+                <p>* This is a computer-generated rank card. No physical signature is required.</p>
+                <p>Date of Issue: 15/06/2026</p>
             </div>
-        </div>
-
-        <!-- MARKS DETAILS -->
-        <table class="data-table">
-            <tr><th colspan="2">MARKS DETAILS</th></tr>
-            <tr><td>Botany</td><td>09</td></tr>
-            <tr><td>Zoology</td><td>08</td></tr>
-            <tr><td>Physics</td><td>05</td></tr>
-            <tr><td>Chemistry</td><td>05</td></tr>
-            <tr style="background-color: #eaeaea;">
-                <td style="text-align: right; padding-right: 20px;">Total Marks</td>
-                <td>27</td>
-            </tr>
-        </table>
-
-        <!-- RANK DETAILS -->
-        <table class="data-table">
-            <tr><th colspan="2">RANK DETAILS</th></tr>
-            <tr>
-                <td>State General Rank</td>
-                <td style="font-size: 16px;">92456</td>
-            </tr>
-            <tr>
-                <td>Category Rank (ST)</td>
-                <td style="font-size: 16px;">4124</td>
-            </tr>
-        </table>
-
-        <!-- FOOTER -->
-        <div class="footer">
-            <p>* This is a computer-generated rank card. No physical signature is required.</p>
-            <p>Date of Issue: 15/06/2026</p>
         </div>
     </div>
 </body>
