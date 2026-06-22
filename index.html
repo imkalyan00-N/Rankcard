@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP EAPCET 2026 RANK CARD</title>
+    <style>
+        body { 
+            font-family: 'Arial', sans-serif; 
+            background-color: #f4f4f4; 
+            display: flex; 
+            justify-content: center; 
+            padding: 20px; 
+        }
+        .card { 
+            background-color: #fff; 
+            width: 210mm; 
+            min-height: 297mm; 
+            padding: 40px; 
+            box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+            position: relative; 
+            box-sizing: border-box;
+            color: #000;
+        }
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #000;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        .header-text { text-align: center; width: 60%; }
+        .header-text h1 { margin: 0; font-size: 20px; font-weight: bold; }
+        .header-text h2 { margin: 5px 0; font-size: 18px; }
+        .header-text p { margin: 0; font-size: 14px; font-weight: bold; }
+        
+        /* Logos Placeholder styling */
+        .logo { width: 80px; height: 80px; object-fit: contain; }
+
+        .candidate-section {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .info-table { width: 75%; border-collapse: collapse; }
+        .info-table td { padding: 8px; font-size: 14px; }
+        .info-table td:nth-child(odd) { font-weight: bold; width: 35%; }
+
+        /* Photo and Sign styling */
+        .photo-sign-container {
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .candidate-photo {
+            width: 100px;
+            height: 120px;
+            border: 1px solid #000;
+            object-fit: cover;
+            margin-bottom: 5px;
+        }
+        .candidate-sign {
+            width: 100px;
+            height: 35px;
+            border: 1px solid #000;
+            object-fit: contain;
+        }
+
+        table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+        .data-table { border: 1px solid #000; }
+        .data-table th { background-color: #eaeaea; border: 1px solid #000; padding: 8px; font-size: 14px; text-align: center; }
+        .data-table td { border: 1px solid #000; padding: 8px; font-size: 14px; }
+        .data-table td:first-child { font-weight: bold; padding-left: 15px; width: 60%; }
+        .data-table td:last-child { text-align: center; font-weight: bold; }
+        
+        .footer { margin-top: 40px; font-size: 12px; text-align: center; border-top: 1px dashed #000; padding-top: 10px; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <!-- HEADER WITH LOGOS -->
+        <div class="header-container">
+            <img src="ap_logo.png" alt="AP Logo" class="logo">
+            <div class="header-text">
+                <h1>GOVERNMENT OF ANDHRA PRADESH</h1>
+                <h2>AP EAPCET - 2026 RANK CARD</h2>
+                <p>(Agriculture & Pharmacy Stream)</p>
+            </div>
+            <img src="apsche_logo.png" alt="APSCHE Logo" class="logo">
+        </div>
+
+        <!-- CANDIDATE INFO, PHOTO & SIGN -->
+        <div class="candidate-section">
+            <table class="info-table">
+                <tr>
+                    <td>Hall Ticket No.</td>
+                    <td>: 561171010199</td>
+                </tr>
+                <tr>
+                    <td>Candidate's Name</td>
+                    <td>: KATTA KEERTANA</td>
+                </tr>
+                <!-- Father's Name intentionally omitted -->
+                <tr>
+                    <td>Gender</td>
+                    <td>: FEMALE</td>
+                </tr>
+                <tr>
+                    <td>Category</td>
+                    <td>: ST</td>
+                </tr>
+                <tr>
+                    <td>Local Area</td>
+                    <td>: AU</td>
+                </tr>
+            </table>
+            
+            <!-- Exact Photo and Sign section -->
+            <div class="photo-sign-container">
+                <img src="photo.jpg" alt="Candidate Photo" class="candidate-photo">
+                <img src="sign.jpg" alt="Candidate Signature" class="candidate-sign">
+            </div>
+        </div>
+
+        <!-- MARKS DETAILS -->
+        <table class="data-table">
+            <tr><th colspan="2">MARKS DETAILS</th></tr>
+            <tr><td>Botany</td><td>09</td></tr>
+            <tr><td>Zoology</td><td>08</td></tr>
+            <tr><td>Physics</td><td>05</td></tr>
+            <tr><td>Chemistry</td><td>05</td></tr>
+            <tr style="background-color: #eaeaea;">
+                <td style="text-align: right; padding-right: 20px;">Total Marks</td>
+                <td>27</td>
+            </tr>
+        </table>
+
+        <!-- RANK DETAILS -->
+        <table class="data-table">
+            <tr><th colspan="2">RANK DETAILS</th></tr>
+            <tr>
+                <td>State General Rank</td>
+                <td style="font-size: 16px;">92456</td>
+            </tr>
+            <tr>
+                <td>Category Rank (ST)</td>
+                <td style="font-size: 16px;">4124</td>
+            </tr>
+        </table>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <p>* This is a computer-generated rank card. No physical signature is required.</p>
+            <p>Date of Issue: 15/06/2026</p>
+        </div>
+    </div>
+</body>
+</html>
